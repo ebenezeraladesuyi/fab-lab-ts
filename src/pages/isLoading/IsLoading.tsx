@@ -16,14 +16,14 @@ const IsLoading = () => {
             height={100}
             width={100}
             radius={5}
-            color="#3e4095"
+            color="#e52500"
             ariaLabel="ball-triangle-loading"
             wrapperStyle={{}}
             wrapperClass=""
             visible={true}
           />
 
-        <i style={{fontSize:"17px", color:"#3e4095", marginTop:"30px"}}>Loading...</i>
+        <i style={{fontSize:"17px", color:"#e52500", marginTop:"30px"}}>Loading...</i>
 
     </div>
   )

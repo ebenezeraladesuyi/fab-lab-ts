@@ -1,7 +1,8 @@
 // import React from 'react'
-import { FaUser } from "react-icons/fa";
+// import { FaUser } from "react-icons/fa";
 import logo from "../../assets/image/logo-black.png";
 import "./Header.css"
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
 
@@ -12,15 +13,25 @@ const Header = () => {
 //     setHovered(!hovered);
 //   };
 
+    // const [show, setShow] = React.useState(false);
+
+    // const showLogoAlone = () => {
+    //     setShow(!show)
+    // }
+
   return (
-    <div className="w-full h-[70px] relative z-40 bg-white flex items-center justify-center shadow-md">
+    <div className="w-full h-[70px] relativ z-40 bg-white flex items-center justify-center shadow-md fixed">
         <div className="w-[90%] flex items-center justify-between ">
 
-            <div className="w-[40px]">
-                <img className="max-w-full" src={logo} />
-            </div>
+            <NavLink to="/">
+                <div className="w-[40px]">
+                    <img className="max-w-full" src={logo} />
+                </div>
+            </NavLink>
 
-            <div className="flex items-center gap-10">
+            <div className=
+            // `${showLogoAlone ? "hidden" : "flex items-center gap-10"}`
+            "flex items-center gap-10">
                 <ol id="menu"  className="border-[2px] border-[#f5f5f5] p-2 rounded-md cursor-pointer transition-all duration-500 ease-in-out hover:border-non hover:bg-gray-200 relative inline-block">
                     <h6 className="">What We Do</h6>
                     <nav id="menu2" className="absolute top-[75px] bg-white z-40 w-[280px] h-[180px] p-3 border-[1px shadow-md rounded-md ">
@@ -125,13 +136,27 @@ const Header = () => {
                 </ol>
             </div>
 
-            <div className="p-2 border-black border-[1px] rounded-full">
+            {/* <div className="p-2 border-black border-[1px] rounded-full">
                 <FaUser />
             </div>
 
             <button className="bg-[#e52500] text-white">
                 Book Now
-            </button>
+            </button> */}
+
+            <div className="flex items-center gap-5">
+                <NavLink to="/signin">
+                    <button className="border-[#e52500] text-[#e52500] border-[1px] text-whit hover:bg-[#e52500] hover:text-white transition-all duration-500 ease-in-out hover:border-none">
+                        Signin
+                    </button>
+                </NavLink>
+
+                <NavLink to="/signup">
+                    <button className="bg-[#e52500] text-white transition-all duration-500 ease-in-out hover:border-[#e52500] hover:text-[#e52500] hover:bg-transparent ">
+                        Register
+                    </button>
+                </NavLink>
+            </div>
         </div>
 
         
